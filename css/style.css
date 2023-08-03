@@ -53,6 +53,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Add styles to center-align the logo */
+.ast_footer_info {
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below the logo */
+}
+
 /*--------- Body End -------*/
 /*---------- Normal Css Start -------*/
 a {
@@ -171,7 +177,7 @@ button:focus {
 }
 
 .ast_toppadder70 {
-    padding-top: 70px;
+    padding-top: 75px;
 }
 
 .ast_toppadder80 {
@@ -211,7 +217,7 @@ button:focus {
 }
 
 .ast_bottompadder70 {
-    padding-bottom: 70px;
+    padding-bottom: -1px;
 }
 
 .ast_bottompadder80 {
@@ -2101,13 +2107,16 @@ button:focus {
     padding: 0px 30px;
 }
 
+
+
 .ast_testimonials_slider_box img {
-    float: left;
-    width: 100px !important;
+    float: right;
+    width: 300px !important;
+    height: 400px !important;
     border-radius: 100%;
-    margin: 10px 0px;
-    padding: 0px;
-    border: 5px solid #ffffff;
+    margin: 64px 0px;
+    padding: -7px;
+    border: 2px solid #ffffff;
     -webkit-box-shadow: 0px 0px 30px -10px #000000;
     -moz-box-shadow: 0px 0px 30px -10px #000000;
     -o-box-shadow: 0px 0px 30px -10px #000000;
