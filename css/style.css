@@ -196,11 +196,7 @@ body {
     color: whitesmoke;
 }
 
-.eventListing_price__2tQLg:hover {
-
-
-    
-}
+.eventListing_price__2tQLg:hover {}
 
 .ast_btn.slot {
     cursor: pointer;
@@ -823,19 +819,18 @@ button:focus {
     color: #fff;
     position: relative;
     overflow: hidden;
-    padding: 250px 0px;
 }
 
 .ast_bannertext_wrapper {
-    align-content: center;
     background-color: rgb(0, 0, 0, 0.3);
     padding-bottom: 2px;
     border-top: 2px solid #F03C02;
     border-bottom: 3px solid #F03C02;
     border-radius: 34px;
-
     transition: all 0s ease 0s;
     width: 60%px;
+    max-width: 50%;
+    margin-inline: auto;
     height: inherit;
 }
 
