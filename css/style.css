@@ -54,15 +54,89 @@ Assigned to: Themeforest
     padding: 65px;
     /* Adjust this value to your desired padding */
 }
+
 /* .margin-set{
     margin-left: 41%;
 } */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-.eventListing_shortDescription__2X7_m{
+.ast_header_bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.ast_logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ast_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ast_menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.ast_menu li:last-child {
+    margin-right: 0;
+}
+
+.ast_banner_text {
+    text-align: center;
+    padding: 150px 0;
+    background-image: url('images/content/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.ast_banner_text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.ast_banner_text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ast_banner_text ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ast_btn {
+    display: inline-block;
+    background-color: #FFC107;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 45px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ast_btn:hover {
+    background-color: #333;
+    color: #FFC107;
+}
+
+.eventListing_shortDescription__2X7_m {
     font-size: 14px;
     opacity: 90%;
     color: #268ede;
 }
+
 .center-text {
     text-align: center;
     margin-left: 400px;
@@ -1619,7 +1693,7 @@ button:focus {
     bottom: 0%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
-  
+
 }
 
 .ast_timer_wrapper .ast_heading h1,
