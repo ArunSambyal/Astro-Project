@@ -4825,7 +4825,8 @@ fieldset:disabled .btn {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, .55)
+    color: #ef9d06;
+    font-size: 20px;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
