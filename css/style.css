@@ -136,8 +136,8 @@ body {
 }
 
 .eventListing_shortDescription__2X7_m {
-    font-size: 24px;
-    opacity: 90%;
+    font-size: 18px;
+    opacity: 80%;
     color: #268ede;
     padding-bottom: 12px;
 }
@@ -343,7 +343,7 @@ button:focus {
 }
 
 .ast_toppadder70 {
-    padding-top: 75px;
+    padding-top: 35px;
 }
 
 .ast_toppadder80 {
