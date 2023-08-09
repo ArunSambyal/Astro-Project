@@ -58,6 +58,16 @@ Assigned to: Themeforest
 /* .margin-set{
     margin-left: 41%;
 } */
+
+
+
+
+/* Custom CSS for maximum width container */
+.max-width-container {
+    max-width: 150px; /* Adjust the max-width as needed */
+    width: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
