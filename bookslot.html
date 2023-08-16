@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bookslot.css" />
+    <link rel="shortcut icon" type="image/png" href="images/content/vas_6.png">
+    <title> Book consultation</title>
+  </head>
+  <body>
+    <div class="ast_packages_wrapper ast_toppadder70" id="packages">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="ast_heading">
+              <h1>Contact<span> With us</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid"
+        style="background-color: #95b1f2; padding: 50px 0"
+      >
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form
+              id="contact_form"
+              action="https://formspree.io/f/mpzgprpr"
+              method="POST"
+              class="contact-form"
+            >
+              <div class="form-group">
+                <input
+                  name="name"
+                  min="5"
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="phone"
+                  type="number"
+                  class="form-control"
+                  placeholder="Phone"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  name="city"
+                  type="text"
+                  class="form-control"
+                  placeholder="City"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-options">
+                  <input type="radio" name="gender" value="Male" required />
+                  Male
+                  <input type="radio" name="gender" value="Female" /> Female
+                  <input type="radio" name="gender" value="Other" /> Other
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  class="form-control"
+                  placeholder="Message"
+                  autocomplete="off"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="consult_type">Consultation Type:</label>
+                <select
+                  id="consult_type"
+                  name="consult_type"
+                  class="form-control"
+                >
+                  <option value="">Select an option</option>
+                  <option value="1on1 Appointments">1 on 1 Appointments</option>
+                  <option value="packages">Packages</option>
+                  <option value="candleRitual">Candle Rituals</option>
+                  <option value="jarspell">Jar Spells</option>
+                  <!-- Add more main options here -->
+                </select>
+              </div>
+
+              <div class="form-group" id="subOptions" style="display: none">
+                <label for="sub_option">Sub Option:</label>
+                <select id="sub_option" name="sub_option" class="form-control">
+                  <option value="">Select a suboption</option>
+                  <!-- Sub-options will be added dynamically using JavaScript -->
+                </select>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2023 Your Astrology Consultation</p>
+    </footer>
+  </body>
+  <script>
+    const consultType = document.getElementById("consult_type");
+    const subOptionsDiv = document.getElementById("subOptions");
+    const subOptionSelect = document.getElementById("sub_option");
+
+    consultType.addEventListener("change", function () {
+      // Clear previous sub-options
+      subOptionSelect.innerHTML =
+        '<option value="">Select a suboption</option>';
+
+      if (consultType.value === "1on1 Appointments") {
+        subOptionSelect.innerHTML += `
+        <option value="Tarot Consultation 45min"> Tarot Consultation 45min</option>
+        <option value="Tarot Consultstion 35min">Tarot Consultstion 35min</option>
+        <option value="Tarot Consultstion 15min">Tarot Consultstion 15min</option>
+      `;
+        subOptionsDiv.style.display = "block";
+      } else if (consultType.value === "packages") {
+        // Add sub-options for "Packages" if needed
+        subOptionSelect.innerHTML += ` <option value="Chakra Healing"> Chakra Healing</option>
+        <option value="Tarot Course">Tarot Course</option>
+        <option value="Wicca Magic">Wicca Magic Course</option>;
+        <option value="Love Healing">Love Healing</option>;
+        <option value="Career Healing"> Career Healing</option>;
+        <option value="Anxiety Healing">Anxiety Healing</option>;
+        <option value="Shatru Istambham">Shatru Istambham</option>;
+        <option value="Master Merlin's Ritual">Master Merlin's Ritual</option>`;
+        subOptionsDiv.style.display = "block";
+      } else if (consultType.value === "candleRitual") {
+        // Add sub-options for "Candle Rituals" if needed
+        subOptionSelect.innerHTML += ` <option value="Problem in love ">Problem in love </option>
+        <option value="Hoodoo for Love ">Hoodoo for Love </option>
+        <option value="Physical Apperance">Physical Apperance</option>;
+        <option value="Modeling Carrer">Modeling Carrer</option>;
+        <option value="fashion Industry Problem">fashion Industry Problem</option>;
+        <option value="Twin flow Connection">Twin flow Connection</option>;
+        <option value="Soulmate Connection">Soulmate Connection</option>;
+        <option value="Financial Crisis">Financial Crisis</option>`;
+        subOptionsDiv.style.display = "block";
+      } else if (consultType.value === "jarspell") {
+        // Add sub-options for "Jar Spells" if needed
+        subOptionSelect.innerHTML += ` <option value="Love Obession"> Love Obession</option>
+        <option value="Evil Eye Protection">Evil Eye Protection</option>
+        <option value="Money Attraction"> Money Attraction</option>;
+        <option value="Soulmate Attraction">Soulmate Attraction</option>;
+        <option value="Physical Attration"> Physical Attration</option>;
+        <option value="Health"> Health</option>;
+        <option value="seven Chakra"> seven Chakra</option>;
+        <option value="Vashikaran"> Vashikaran</option>;
+        <option value="Mohini"> Mohini </option>;
+        <option value="Fame"> Fame</option>;
+        <option value="Good lucks"> Good lucks</option>;
+        <option value="Twin flame Connection"> Twin flame Connection</option>`;
+        subOptionsDiv.style.display = "block";
+      } else {
+        subOptionsDiv.style.display = "none";
+      }
+    });
+  </script>
+</html>

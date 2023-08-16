@@ -44,15 +44,194 @@ Assigned to: Themeforest
 32. Responsive css start / .ast_packages_box ul li
 -------------------------------------------------------------------*/
 /*--------- Body Start -------*/
-.ast_img_overlay {
-    position: absolute;
+/* Styling for the modal background overlay */
+/* Styling for the modal background overlay */
+/* Styling for the modal background overlay */
+/* Styling for the modal background overlay */
+/* Style for the modal overlay */
+.whatsapp-icons {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+  background: #25d366;
+    border-radius: 60%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+   
+    z-index: 10000;
+   
+}
+
+.whatsapp-icons:hover {
+    transform: scale(1.1);
+
+}
+.whatsapp-links {
+    display: inline-block;
+       size: 40px;
+       background-color: #25D366;
+        border-radius: 100%;
+   
+       
+      
+}
+
+
+
+
+
+
+
+.whatsapp-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    font-size: 24px;
+    color: #25D366; /* WhatsApp green color */
+    vertical-align: middle;
+}
+
+
+.box-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .box-img {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .box-img:hover img {
+    transform: scale(1.2);
+    transition: transform ease 1s;
+  }
+  
+.modal {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 65px;
-    /* Adjust this value to your desired padding */
+    align-items: center; /* Center both horizontally and vertically */
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  /* Style for the modal content */
+  .modal-content {
+    background-color: white;
+    /* Adjust the padding to control the width */
+    width: 50px;
+    padding: 84px; /* 84px top and bottom, 20px left and right */
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the text horizontally */
+    position: relative;
+    margin-top: 200px;
+}
+
+  
+  /* Style for the close button */
+  .modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  /* Style for the modal title */
+  #modalTitle1 {
+    margin-top: 0;
+    ;
+  }
+  
+  /* Style for the modal content text */
+  #modalContent1 {
+    margin-bottom: 20px;
+    
+  }
+  
+  /* Style for the "Book Slot" button */
+  #innerButton1 {
+    background-color: #e19d0b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;width: 300px;
+    align-self: center;
+  }
+  
+  
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Section styles */
+.ast_packages_wrapper {
+    background-color: #f7f7f7;
+    padding: 70px 0;
+}
+.ast_packages_wrapper {
+    background-image: url('images\content\slider2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/* Form styles */
+.contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.contact-form h1 span {
+    color: #007bff;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-control:hover {
+    border-color: #ff7000;
+}
+
+.btn-primary {
+    background-color: #ff7000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
 }
 
 /* .margin-set{
@@ -1804,7 +1983,7 @@ border-radius: 15px;
 }
 
 .ast_packages_box {
-    
+    border-radius: 20px;
     float: left;
     width: 100%;
     background-color: #fbf1f1eb;
