@@ -49,6 +49,16 @@ Assigned to: Themeforest
 /* Styling for the modal background overlay */
 /* Styling for the modal background overlay */
 /* Style for the modal overlay */
+.rituals-list {
+    /* list-style-type: none; */
+    padding: 0;
+}
+
+.rituals-list li {
+    text-align: left;
+    margin-left: 1em; /* Adjust this value as needed */
+}
+
 .whatsapp-icons {
     position: fixed;
     bottom: 40px;
@@ -121,7 +131,7 @@ Assigned to: Themeforest
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center; /* Center both horizontally and vertically */
     justify-content: center;
-    z-index: 9999;
+    z-index: 19999;
   }
   
   /* Style for the modal content */
@@ -161,6 +171,7 @@ Assigned to: Themeforest
     margin-bottom: 20px;
     
   }
+  
   
   /* Style for the "Book Slot" button */
   #innerButton1 {
@@ -1416,7 +1427,7 @@ border-radius: 15px;
     text-align: center;
     /* margin-bottom: 50px; */
     position: relative;
-    z-index: 1;
+    
 }
 
 .ast_heading h1 {
