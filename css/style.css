@@ -61,30 +61,20 @@ Assigned to: Themeforest
 
 .whatsapp-icons {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-  background: #25d366;
-    border-radius: 60%;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%; /* Adjust the border-radius to make the icon circular */
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    
-   
     z-index: 10000;
-   
 }
 
 .whatsapp-icons:hover {
     transform: scale(1.1);
-
 }
-.whatsapp-links {
-    display: inline-block;
-       size: 40px;
-       background-color: #25D366;
-        border-radius: 100%;
-   
-       
-      
+
+.whatsapp-links img {
+    width: 40px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 
