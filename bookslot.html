@@ -104,6 +104,7 @@
                   <option value="1on1 Appointments">1 on 1 Appointments</option>
                   <option value="packages">Packages</option>
                   <option value="candleRitual">Candle Rituals</option>
+                  <option value="crystalBall">Crystal Ball</option>
                   <option value="jarspell">Jar Spells</option>
                   <!-- Add more main options here -->
                 </select>
@@ -118,7 +119,7 @@
               </div>
 
               <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                <button type="submit" id="submitBtn" class="btn btn-primary btn-lg btn-block">
                   Submit
                 </button>
               </div>
@@ -170,7 +171,21 @@
         <option value="Soulmate Connection">Soulmate Connection</option>;
         <option value="Financial Crisis">Financial Crisis</option>`;
         subOptionsDiv.style.display = "block";
-      } else if (consultType.value === "jarspell") {
+      } else if (consultType.value === "crystalBall") {
+        // Add sub-options for "Candle Rituals" if needed
+        subOptionSelect.innerHTML += ` <option value="Unveiling Future Opportunities ">Unveiling Future Opportunities </option>
+        <option value="Guidance for Life Decisions">Guidance for Life Decisions </option>
+        <option value="Relationship Clarity">Relationship Clarity</option>;
+        <option value="Discovering Spiritual Path">Discovering Spiritual Path</option>;
+        <option value="Insight into Career Paths">Insight into Career Paths</option>;
+        <option value="Finding Inner Peace">Finding Inner Peace</option>;
+        <option value="Connecting with Higher Self">Connecting with Higher Self</option>;
+        <option value="Unlocking Intuition">Unlocking Intuition</option>`;
+        subOptionsDiv.style.display = "block";
+      }
+      
+      
+      else if (consultType.value === "jarspell") {
         // Add sub-options for "Jar Spells" if needed
         subOptionSelect.innerHTML += ` <option value="Love Obession"> Love Obession</option>
         <option value="Evil Eye Protection">Evil Eye Protection</option>
@@ -190,4 +205,44 @@
       }
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    const submitBtn = document.getElementById("submitBtn");
+  
+    submitBtn.addEventListener("click", function () {
+      const name = $("input[name='name']").val();
+      const email = $("input[name='email']").val();
+      const phone = $("input[name='phone']").val();
+      const city = $("input[name='city']").val();
+      const gender = $("input[name='gender']:checked").val();
+      const message = $("textarea[name='message']").val();
+      const consultType = $("#consult_type").val();
+      const subOption = $("#sub_option").val();
+  
+      const options = {
+        key: 'YOUR_RAZORPAY_KEY', // Replace with your Razorpay API key
+        amount: 10000, // Replace with the actual amount in paise
+        currency: 'INR',
+        name: 'Your Astrology Consultation',
+        description: `${consultType} - ${subOption}`,
+        image: 'images/content/shipra-logo.png', // Replace with your logo image URL
+        order_id: 'order_' + Math.random(), // Replace with actual order ID
+        handler: function (response) {
+          // This function will be called after successful payment
+          // You can redirect the user to a thank you page or perform further actions
+          console.log('Payment successful:', response);
+        },
+        prefill: {
+          name: name,
+          email: email,
+          contact: phone,
+        },
+      };
+  
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  </script>
+ 
 </html>

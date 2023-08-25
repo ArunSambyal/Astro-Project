@@ -49,6 +49,42 @@ Assigned to: Themeforest
 /* Styling for the modal background overlay */
 /* Styling for the modal background overlay */
 /* Style for the modal overlay */
+
+
+
+.model-btn{
+
+    background: #ff7000;
+}
+/* Styles for the Crystal Ball Gazing Reading section */
+#crystal-ball {
+    padding: 50px 0;
+}
+
+.box-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ast_about_wrapper {
+    position: relative;
+}
+
+.col-lg-5 {
+    order: 2;
+}
+
+.col-lg-7 {
+    order: 1;
+}
+
+@media (max-width: 991px) {
+    .col-lg-5, .col-lg-7 {
+        order: unset;
+    }
+}
+
 .rituals-list {
     /* list-style-type: none; */
     padding: 0;
@@ -77,7 +113,10 @@ Assigned to: Themeforest
     height: auto; /* Maintain aspect ratio */
 }
 
-
+.btn-submit{
+    background: #fdfcfa;
+    border-radius: 20px;
+}
 
 
 
@@ -328,7 +367,7 @@ body {
 .eventListing_shortDescription__2X7_m {
     font-size: px;
     opacity: 80%;
-    color: #268ede;
+    color: black;
     padding-bottom: 12px;
 }
 
@@ -560,6 +599,7 @@ button:focus {
 
 .ast_toppadder70 {
     padding-top: 35px;
+    padding-bottom: 25px;
 }
 
 .ast_toppadder80 {
@@ -1954,7 +1994,7 @@ border-radius: 15px;
     float: left;
     font-size: 36px;
     margin: 0px;
-    color: #F03C02;
+    color: #ff7000;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -2993,7 +3033,7 @@ border-radius: 15px;
 .ast_gettouch ul li i {
     float: left;
     width: 30px;
-    color: #F03C02;
+    color: #ff7000;
     font-size: 20px;
     padding-top: 3px;
 }
@@ -3043,7 +3083,7 @@ border-radius: 15px;
 
 .ast_copyright_wrapper p a {
     font-weight: 700;
-    color: #F03C02;
+    color: #ff7000;
 }
 
 /*---------- Footer Wrapper css end -------*/
@@ -3583,7 +3623,7 @@ border-radius: 15px;
     bottom: 0%;
     left: 0%;
     width: 70px;
-    background-color: #F03C02;
+    background-color: #ff7000;
     height: 2px;
 }
 
@@ -6338,7 +6378,10 @@ li.ast_cart {
 /*--- about slider ---*/
 
 .ast_about_wrapper .row {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the order of image and text */
     align-items: center;
+   
 }
 
 .ast_about_wrapper.ast_bottompadder70 {
